@@ -12,7 +12,7 @@ projects
 Contributors
 ============
 * `Christopher Clarke <https://github.com/chrisdev>`_
-* `Bertrand Bordage <https://github.com/BertrandBordage`_
+* `Bertrand Bordage <https://github.com/BertrandBordage>`_
 
 Dependencies
 =============
@@ -72,7 +72,7 @@ in your settings module to include ``django_pandas``.
 IO Module
 ==========
 The ``django-pandas.io`` module provides some convenience methods to facilitate the
-creation of DataFrames from Django QuerySets and saving data to the underlying
+creation of ``DataFrames`` from Django ``QuerySets`` and saving data to the underlying
 models.
 
 read_frame
@@ -102,7 +102,7 @@ DataFrameManager
 ``django-pandas`` provides a custom manager to use with models that
 you want to render as Pandas Dataframes. The ``DataFrameManager``
 manager provides the ``to_dataframe`` method that returns 
-your models queryset as a Pandas DataFrame. To use the DataFrameManager, first
+your models queryset as a Pandas ``DataFrame``. To use the ``DataFrameManager``, first
 override the default manager in your model's definition 
 as shown in the example below ::
     
@@ -129,7 +129,7 @@ This will give you access to the following QuerySet methods:
 to_dataframe
 --------------
 
-Returns a DataFrame from the QuerySet
+Returns a ``DataFrame`` from the ``QuerySet``
 
 **Parameters**
 
@@ -158,7 +158,7 @@ Create a dataframe using all the fields  in your model as follows ::
 
     df = qs.to_dataframe()
 
-This will include you primary key create a DataFrame only from specified
+This will include you primary key create a ``DataFrame`` only from specified
 field names::
     
      df = qs.to_dataframe(['age', 'department', 'wage'])
@@ -175,7 +175,7 @@ to_timeseries
 --------------
 
 A convenience method for creating a time series i.e the
-DataFrame index is instance of a DateTime or PeriodIndex
+``DataFrame`` index is instance of a ``DateTime`` or ``PeriodIndex``
 
 **Parameters**
 
@@ -244,7 +244,7 @@ Some sample data:::
     ==========  ========== ======
 
 
-Create a QuerySet ::
+Create a ``QuerySet`` ::
 
     qs = LongTimeSeries.objects.filter(date_ix__year__gte=2010)
 
@@ -285,7 +285,7 @@ Using a *wide* storage format ::
 
 to_pivot_table
 --------------
-A convenience method for creating a pivot table from a QuerySet
+A convenience method for creating a pivot table from a ``QuerySet``
 
 **Parameters**
 
@@ -321,7 +321,8 @@ A convenience method for creating a pivot table from a QuerySet
 
         objects = DataFrameManager()
 
-Usage ::
+**Usage** 
+::
 
         rows = ['row_col_a', 'row_col_b']
         cols = ['row_col_c']
